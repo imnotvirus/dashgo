@@ -6,49 +6,25 @@ import {
   RiGitMergeLine,
   RiInputMethodLine,
 } from "react-icons/ri";
+import NavLink from "./NavLink";
+import NavSection from "./NavSection";
 
 const Sidebar: React.FC = () => {
   return (
     <Box as="aside" w="64" mr="8">
       <Stack spacing="12" align="flex-start">
-        <Box>
-          <Text fontWeight="bold" color="gray.400" fontSize="small">
-            GERAL
-          </Text>
+        <NavSection title="GERAL">
           <Stack spacing="4" mt="8" align="stretch">
-            <Link display="flex" py="1">
-              <Icon as={RiDashboardLine} fontSize="20" />
-              <Text fontSize="medium" ml="4">
-                Dashboard
-              </Text>
-            </Link>
-            <Link display="flex" py="1">
-              <Icon as={RiContactsLine} fontSize="20" />
-              <Text fontSize="medium" ml="4">
-                Usuários
-              </Text>
-            </Link>
+            <NavLink icon={RiDashboardLine}>Dashboard</NavLink>
+            <NavLink icon={RiContactsLine}>Usuários</NavLink>
           </Stack>
-        </Box>
-        <Box>
-          <Text fontWeight="bold" color="gray.400" fontSize="small">
-            AUTOMAÇÃO
-          </Text>
+        </NavSection>
+        <NavSection title="AUTOMAÇÃO">
           <Stack spacing="4" mt="8" align="stretch">
-            <Link display="flex" py="1">
-              <Icon as={RiInputMethodLine} fontSize="20" />
-              <Text fontSize="medium" ml="4">
-                Formulários
-              </Text>
-            </Link>
-            <Link display="flex" py="1">
-              <Icon as={RiGitMergeLine} fontSize="20" />
-              <Text fontSize="medium" ml="4">
-                Automação
-              </Text>
-            </Link>
+            <NavLink icon={RiInputMethodLine}>Formulários</NavLink>
+            <NavLink icon={RiGitMergeLine}>Automação</NavLink>
           </Stack>
-        </Box>
+        </NavSection>
       </Stack>
     </Box>
   );

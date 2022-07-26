@@ -5,7 +5,7 @@ import { IInput } from "./types";
 const Input: React.FC<IInput> = ({ name, label, ...rest }) => {
   return (
     <FormControl>
-      {!!label && <FormLabel htmlFor={name}>Email</FormLabel>}
+      {!!label && <FormLabel htmlFor={name}>{label}</FormLabel>}
       <ChakraInput
         name={name}
         id={name}

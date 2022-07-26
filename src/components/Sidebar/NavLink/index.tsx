@@ -1,5 +1,4 @@
 import { Icon, Link as ChakraLink, Text } from "@chakra-ui/react";
-import Link from "next/link";
 import React from "react";
 import { INavLink } from "./types";
 
